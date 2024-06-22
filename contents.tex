@@ -1,0 +1,82 @@
+\begin{titlepage}
+    \begin{center}
+      
+        \centering
+        \includegraphics[width=.4\textwidth]{./figures/UoSlogo2022.eps}         
+        
+        \vspace{0.5cm}
+
+        \Large
+        Faculty\\
+        Group\\
+        University of Southampton\\
+                  
+        \vfill
+
+        \Huge
+        \textbf{Title}
+        
+        \vfill
+
+        \LARGE
+        \textit{by}  \\
+        \textbf{Name}\\
+        \Large
+        ORCiD:~\href{https://orcid.org/}{ID here}
+            
+        \vfill
+
+        \textit{A thesis for the degree of\\Doctor of Philosophy}
+                  
+        \vfill
+        \DTMlangsetup{showdayofmonth=false}
+        \today
+        \vfill
+        
+      \end{center}
+  \afterpage{\blankpage}
+
+\end{titlepage}
+\restoregeometry
+\input{abstract.tex}
+
+\onehalfspacing%set line spacing to 1.5
+
+\pagenumbering{roman}
+\pagestyle{plain}
+{
+  \hypersetup{hidelinks}
+  \tableofcontents
+  \listoffigures
+  \addcontentsline{toc}{chapter}{List of Figures}
+  \begingroup
+  \clearpage
+  \listoftables
+  \addcontentsline{toc}{chapter}{List of Tables}
+  \endgroup
+  \cleardoublepage
+}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Accompanying material}
+\input{accompanying_material.tex}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Declaration of Authorship}
+\input{dec_of_author.tex}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\input{acknowledgements.tex}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Definitions and Abbreviations}
+\chapter*{Definitions and Abbreviations}
+
+\acuseall
+\printacronyms[display=all,heading=section*,include=acronym,name=Acronyms]
+\printacronyms[display=all,heading=section*,include=symbol,name=Symbols]
+
+\cleardoublepage
+
+

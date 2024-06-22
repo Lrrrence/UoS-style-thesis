@@ -1,0 +1,73 @@
+\documentclass{UoSclass} % Use the Thesis Style
+
+% include your .bib files here
+\addbibresource{example_refs.bib}
+
+\begin{document}
+
+\includepdf[pages={1}]{Thesis_Copyright_Declaration.pdf}
+\cleardoublepage
+\microtypesetup{protrusion=false}
+
+\input{contents.tex}
+
+\pagenumbering{arabic}
+\pagestyle{fancy}% set headers/footers
+\microtypesetup{protrusion=true}
+
+\chapter{Introduction}
+\setcounter{page}{1}
+
+\lipsum[1]
+
+\section{Examples}
+
+Bagavathiappan~\textit{et al.}~\cite{Bagavathiappan2013} suggest that this is a great template, but Liu~\textit{et al.}~\cite{Liu2022} aren't so sure. Maybe these equation examples will convince you:
+%
+\begin{equation} \label{eq:velocitytext}
+    v = \left( \frac{d_{\textrm{aligned}} + d_{\textrm{offset}}}{t_{\textrm{aligned}} - t_{\textrm{wedge}}} \right)
+    \tagaddtext{[\si{\meter\per\second}]}
+\end{equation} 
+%
+\begin{equation} \label{eq:velocitynum}
+    5099.18 = \left( \frac{0.1 + 0.04587}{5.812{\times}10^{-5} - 2.951{\times}10^{-5}} \right)
+    \tagaddtext{[\si{\meter\per\second}]}
+\end{equation} 
+%
+
+\clearpage
+
+\vspace*{\fill}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.8\textwidth]{./figures/example_photo.JPG}
+    \caption[Royal Victoria Chapel, Southampton]{Royal Victoria Chapel, Southampton.}\label{fig:ngv_photo}
+\end{figure}
+\vfill
+\begin{table}[h]
+    \centering
+    \begin{tabulary}{\textwidth}{L}
+        \toprule
+        \textbf{Measurement Hardware}     \\
+        \midrule
+        2x Olympus ABWX-2001 Variable angle wedges \\
+        2x Olympus A539S-SM 1~MHz transducers \\
+        Olympus ultrasonic couplant B \\
+        GW Instek MFG-2203M Signal generator \\
+        Picoscope 3406DMSO USB Oscilloscope \\
+        Thermadata T-type temperature loggers \\
+        VWR Hot plate \\
+        \bottomrule
+    \end{tabulary} 
+    \caption{Experimental measurement hardware.}\label{table:hardware}
+\end{table}
+\vfill
+
+% Include chapters here:
+% \input{chapter1.tex}
+
+\cleardoublepage
+\printbibliography[title={List of references}]
+\addcontentsline{toc}{chapter}{List of references}%Including it as a chapter
+
+\end{document}
